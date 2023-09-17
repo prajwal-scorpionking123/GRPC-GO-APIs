@@ -27,6 +27,7 @@ func doGreetEveryOne(client pb.GreetServiceClient){
 		if err!=nil{
 			log.Fatal("FAILED TO Send req")
 		}
+		log.Println("SEND Request:",req.FirstName)
 		time.Sleep(1 * time.Second)
 	}
 	stream.CloseSend()
